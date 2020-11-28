@@ -1,0 +1,123 @@
+.head-box {
+  background-color: #19A27C;
+  width: 100%;
+  box-sizing: border-box;
+  height: 264rpx;
+  padding-top: 48rpx;
+}
+
+.user-info {
+  width: 86%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 36rpx 64rpx;
+  background: #fff;
+  border-radius: 24rpx;
+  box-shadow: 2rpx 2rpx 8rpx 4rpx rgba(0, 0, 0, .1);
+  height: 300rpx;
+}
+
+.container {
+  background-color: #eee;
+}
+
+.user-img {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 80rpx;
+  font-size: 96rpx;
+  line-height: 160rpx;
+  text-align: center;
+  color: #333;
+  margin-right: 32rpx;
+}
+
+.user-nickname {
+  font-size: 32rpx;
+  color: #333;
+  margin-top: 32rpx;
+  margin-bottom: 12rpx;
+}
+
+.user-nickname .name {
+  font-size: 36rpx;
+}
+
+
+
+
+.get-info button {
+  font-size: 32rpx;
+  color: #333;
+  line-height: 36rpx;
+  border: none;
+  height: 36rpx;
+  padding: 0;
+  margin: 0;
+  background:#fff;
+}
+
+.update-info button {
+  font-size: 24rpx;
+  background: rgba(245, 51, 17, 0.4);
+  color: #fff;
+  border-radius: 36rpx;
+  line-height: 36rpx;
+  border: none;
+  height: 36rpx;
+  padding: 0 24rpx;
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+button::after {
+  display: none;
+}
+
+.my-num-box {
+  margin-top: 112rpx;
+  display: flex;
+  background: #fff;
+  padding: 32rpx;
+}
+
+.my-num-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-right: 1rpx solid #ddd;
+}
+
+.my-num-item:last-child {
+  border: none
+}
+
+.my-num-item .label {
+  font-size: 28rpx;
+  color: rgba(245, 51, 17, 1);
+  margin-bottom: 8rpx;
+}
+
+.my-num-item .value {
+  font-size: 32rpx;
+  font-weight: 900;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-num-item .value .icon {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 8rpx;
+}

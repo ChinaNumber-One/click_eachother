@@ -1,0 +1,17 @@
+<button wx:if='{{showOpenSettingBtn}}' open-type="openSetting" bindopensetting="getOpenSettingData">打开设置页</button>
+
+<van-dialog
+  title="提示"
+  show="{{ showDialog }}"
+  show-cancel-button
+  confirmButtonText='去开启'
+  confirm-button-open-type="openSetting"
+  bind:opensetting="getOpenSettingData"
+  message="您已拒绝授权获取微信运动数据！"
+>
+</van-dialog>
+
+
+
+<present-modal bind:close='closePresentModal' num='{{presentModalNum}}' desc='{{presentModalDesc}}'
+	show="{{showPresentModal}}"></present-modal>

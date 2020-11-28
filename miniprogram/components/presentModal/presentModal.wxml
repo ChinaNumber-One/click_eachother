@@ -1,0 +1,13 @@
+<view class='mask' wx:if='{{show}}'>
+  <view class='modal-box'>
+    <image class='modal-bg' mode="aspectFit" src='../../images/present-gb.png'></image>
+    <view class='modal-text'>
+      <view class='modal-desc'>{{desc}}</view>
+      <view class='modal-num'>
+        <text>{{num}}</text>
+        <text style='font-size:36rpx;padding-left: 8rpx'>金币</text>
+      </view>
+    </view>
+    <image bindtap="closeModal" class='modal-close' src='../../images/close-icon-fff.png' mode="aspectFit"></image>
+  </view>
+</view>

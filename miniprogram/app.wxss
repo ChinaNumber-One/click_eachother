@@ -1,0 +1,29 @@
+.container {
+  width: 100vw;
+  font-size: 14px;
+  background: #fff;
+  min-height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+} 
+.flex-row {
+  display: flex;
+  align-items: center;
+}
+.flex-row-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.page-box {
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  position: relative;
+}

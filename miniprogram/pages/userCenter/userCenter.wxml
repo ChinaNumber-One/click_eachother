@@ -1,0 +1,105 @@
+<view class='container'>
+	<view class='head-box'>
+		<view class='user-info' wx:if="{{info.avatarUrl}}">
+			<image class='user-img' src="{{info.avatarUrl}}"></image>
+			<view class='user-nickname'>
+				<view class='name'>{{info.nickName}}</view>
+				<van-button class='update-info' type="info" open-type="getUserInfo" bindgetuserinfo="getUserInfo">更新资料
+				</van-button>
+			</view>
+		</view>
+		<view class='user-info' wx:else>
+			<image class='user-img' src="../../images/default_headImg.png"></image>
+			<view style='text-align:center;'>
+				<van-button class='get-info' type="info" open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权头像和昵称
+				</van-button>
+				<view style='font-size: 24rpx;color:red;margin-top:12rpx;'>（奖励 {{authUserInfoNum}}金币）</view>
+			</view>
+		</view>
+	</view>
+	<view class='my-num-box'>
+		<view class='my-num-item'>
+			<view class='label'>我的金币</view>
+			<view class='value'>
+				<!-- <image src='../../images/gold-icon.png' mode='aspectFit' class='icon'></image> -->
+				<view>{{info.goldCoin}}</view>
+			</view>
+		</view>
+		<view class='my-num-item'>
+			<view class='label'>我的任务</view>
+			<view class='value'>5</view>
+		</view>
+		<view class='my-num-item'>
+			<view class='label'>已接任务</view>
+			<view class='value'>5</view>
+		</view>
+	</view>
+	<!-- <view class='cell-box'>
+		<view catchtap="jumpPage" data-url="./myTemplate/myTemplate" class='flex-row flex-row-between cell-item'>
+			<view class='flex-row'>
+				<image src="../../images/my-template-icon.png" class='cell-img'></image>
+				<view>我的模版</view>
+			</view>
+			<image src='../../images/arrow_right.png' class='arrow-img'></image>
+		</view>
+
+		<view catchtap="jumpPage" data-url="./myResume/myResume" class='flex-row flex-row-between cell-item'>
+			<view class='flex-row'>
+				<image src="../../images/my-resume-icon.png" class='cell-img'></image>
+				<view>我的简历</view>
+			</view>
+			<image src='../../images/arrow_right.png' class='arrow-img'></image>
+		</view>
+
+		<view catchtap="jumpPage" data-url="./invitationCode/invitationCode" class='flex-row flex-row-between cell-item'>
+			<view class='flex-row'>
+				<image src="../../images/power-icon.png" class='cell-img'></image>
+				<view>我的邀请码</view>
+				<image src="../../images/wenhao-icon.png" class='cell-img' style="width:28rpx;height:28rpx;margin-left:16rpx;"
+					catchtap="invitationCode"></image>
+			</view>
+			<image src='../../images/arrow_right.png' class='arrow-img'></image>
+		</view>
+
+		<view catchtap="jumpPage" data-url="./visitRecord/visitRecord" class='flex-row flex-row-between cell-item'>
+			<view class='flex-row'>
+				<image src="../../images/view-record-icon.png" class='cell-img'></image>
+				<view>看过我的人</view>
+			</view>
+			<image src='../../images/arrow_right.png' class='arrow-img'></image>
+		</view>
+
+		<view catchtap="jumpPage" data-url="./bindPhone/bindPage" class='flex-row flex-row-between cell-item'>
+			<view class='flex-row'>
+				<image src="../../images/bind-phone.png" class='cell-img'></image>
+				<view>绑定手机号</view>
+			</view>
+			<image src='../../images/arrow_right.png' class='arrow-img'></image>
+		</view>
+		<button show-message-card open-type="contact" class='flex-row flex-row-between cell-item'>
+			<view class='flex-row'>
+				<image src="../../images/kefu-icon.png" class='cell-img'></image>
+				<view>联系客服</view>
+			</view>
+			<image src='../../images/arrow_right.png' class='arrow-img'></image>
+		</button>
+		<view class='flex-row flex-row-between cell-item' catchtap="jumpPage" data-url="./versionInfo/versionInfo">
+			<view class='flex-row'>
+				<image src="../../images/info-icon.png" style="width:48rpx;height:48rpx;" class='cell-img'></image>
+				<view>版本信息</view>
+			</view>
+			<image src='../../images/arrow_right.png' class='arrow-img'></image>
+		</view>
+		<view wx:if="{{info.type === '1'}}" catchtap="jumpPage" data-url="./myUser/myUser"
+			class='flex-row flex-row-between cell-item'>
+			<view class='flex-row'>
+				<image src="../../images/tongji-icon.png" class='cell-img'></image>
+				<view>用户统计</view>
+			</view>
+			<image src='../../images/arrow_right.png' class='arrow-img'></image>
+		</view>
+	</view> -->
+</view>
+
+<present-modal bind:close='closePresentModal' num='{{presentModalNum}}' desc='{{presentModalDesc}}'
+	show="{{showPresentModal}}"></present-modal>

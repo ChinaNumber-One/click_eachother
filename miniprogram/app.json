@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/userCenter/userCenter",
+    "pages/step/step",
+    "pages/publish/publish",
+    "pages/task/task"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "帮我点一下",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#19A27C",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/footer-icon-1.png",
+        "selectedIconPath": "images/footer-icon-1-active.png"
+      },
+      {
+        "text": "运动步数",
+        "pagePath": "pages/step/step",
+        "iconPath": "images/footer-icon-2.png",
+        "selectedIconPath": "images/footer-icon-2-active.png"
+      },
+      {
+        "text": "发布任务",
+        "pagePath": "pages/publish/publish",
+        "iconPath": "images/footer-icon-3.png",
+        "selectedIconPath": "images/footer-icon-3-active.png"
+      },
+      {
+        "text": "赚金币",
+        "pagePath": "pages/task/task",
+        "iconPath": "images/footer-icon-4.png",
+        "selectedIconPath": "images/footer-icon-4-active.png"
+      },
+      {
+        "text": "个人中心",
+        "pagePath": "pages/userCenter/userCenter",
+        "iconPath": "images/footer-icon-5.png",
+        "selectedIconPath": "images/footer-icon-5-active.png"
+      }
+    ]
+  }
+}

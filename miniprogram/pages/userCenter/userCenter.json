@@ -1,11 +1,13 @@
 {
   "usingComponents": {
     "van-button": "@vant/weapp/button/index",
-    "present-modal": "../../components/presentModal/presentModal"
+    "present-modal": "../../components/presentModal/presentModal",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-share-sheet": "@vant/weapp/share-sheet/index"
   },
   "navigationBarTitleText": "个人中心",
   "enablePullDownRefresh": true,
   "backgroundTextStyle": "dark",
-  "navigationBarBackgroundColor": "#19A27C",
   "navigationBarTextStyle": "white"
 }

@@ -1,0 +1,92 @@
+.head-box {
+  box-sizing: border-box;
+  color: #fff;
+  height: 320rpx;
+  background-image: linear-gradient(to bottom right, #000, #5a5a5a);
+  border-radius: 32rpx;
+  margin-bottom: 64rpx;
+  padding: 64rpx;
+  position: relative;
+  overflow: hidden;
+}
+
+.head-box::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #FFCA4C;
+  height: 36rpx;
+}
+
+.container {
+  width: 100vw;
+  padding: 32rpx;
+}
+
+.coin-nums-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32rpx;
+}
+
+.coin-nums-row .nums {
+  font-size: 64rpx;
+  font-weight: 900;
+  color: #FFCA4C;
+  display: flex;
+  align-items: center;
+  background: #FFCA4C;
+  background: linear-gradient(to bottom, #FFCA4C 0%, #FFCA4C 40%, #8c5c2e 55%, #FFCA4C 80%, #FFCA4C 91%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.coin-nums-row .nums .icon {
+  width: 64rpx;
+  height: 64rpx;
+  margin-right: 16rpx;
+}
+
+.coin-nums-row .btn {
+  padding: 0 16rpx;
+  font-size: 24rpx;
+  line-height: 44rpx;
+  border-radius: 22rpx;
+  border: 1rpx solid #FFF;
+}
+.item {
+  border-bottom: 1rpx solid #eee;
+  padding: 16rpx 0;
+}
+.item:last-child {
+  border: none;
+}
+.item .icon {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 16rpx;
+}
+.item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item-title {
+  font-size: 32rpx;
+}
+.item-num {
+  display: flex;
+  align-items: center;
+  font-size: 36rpx;
+  font-weight: 900;
+  
+}
+.item-date {
+  margin-top: 8rpx;
+  color: #666;
+  font-size: 28rpx;
+}

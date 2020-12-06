@@ -1,0 +1,28 @@
+<view class='container'>
+  <view class='head-box'>
+    <view>我的金币</view>
+    <view class='coin-nums-row'>
+      <view class='nums'>
+        <image src='../../images/gold-icon.png' class='icon'></image>
+        <view>{{total}}</view>
+      </view>
+      <view class='btn' bindtap="goPage">赚金币</view>
+    </view>
+  </view>
+  <van-divider contentPosition="center" customStyle="color: #000; border-color: #000; font-size: 28rpx;">
+    金币明细
+  </van-divider>
+  <view class='list'>
+    <view class='item' wx:for='{{list}}'>
+      <view class='item-head'>
+        <view class='item-title'>{{item.title}}</view>
+        <view class='item-num'>
+          <image src='../../images/gold-icon.png' class='icon'></image>
+          <view style='color:{{item.changeNum>0?"red":"#999"}}'>{{item.changeNum>0?"+":"-"}}{{item.changeNum}}</view>
+        </view>
+      </view>
+      <view class='item-date'>{{item.date}}</view>
+    </view>
+  </view>
+  <van-divider wx:if="{{noMore}}" contentPosition="center">没有更多了</van-divider>
+</view>

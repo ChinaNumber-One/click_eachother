@@ -2,11 +2,11 @@ const types = [
   {
     type: 1,
     presentModalNum: 100,
-    presentModalDesc: '每日登录'
+    presentModalDesc: '每日签到'
   },
   {
     type: 2,
-    presentModalNum: 500,
+    presentModalNum: 1000,
     presentModalDesc: '新人专享'
   },
   {

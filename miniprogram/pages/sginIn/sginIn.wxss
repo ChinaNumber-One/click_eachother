@@ -1,0 +1,6 @@
+.tips {
+  color: red;
+  font-size: 24rpx;
+  line-height: 64rpx;
+  text-align: center;
+}

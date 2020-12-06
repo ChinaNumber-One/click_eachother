@@ -1,7 +1,11 @@
+page {
+  background: #fff;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
 .container {
   width: 100vw;
   font-size: 14px;
-  background: #fff;
   min-height: 100vh;
   position: relative;
   box-sizing: border-box;
@@ -26,4 +30,13 @@
   width: 100vw;
   box-sizing: border-box;
   position: relative;
+}
+button {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+button::after {
+  display: none;
 }

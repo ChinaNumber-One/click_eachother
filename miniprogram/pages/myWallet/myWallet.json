@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-divider": "@vant/weapp/divider/index"
+  },
+  "navigationBarTitleText": "我的钱包",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationBarTextStyle": "white"
+}

@@ -1,7 +1,9 @@
 {
   "usingComponents": {
     "van-dialog": "@vant/weapp/dialog/index",
-    "present-modal": "../../components/presentModal/presentModal"
+    "present-modal": "../../components/presentModal/presentModal",
+    "van-circle": "@vant/weapp/circle/index"
   },
-  "navigationBarTitleText": "运动步数"
+  "navigationBarTitleText": "运动步数",
+  "navigationBarTextStyle": "white"
 }

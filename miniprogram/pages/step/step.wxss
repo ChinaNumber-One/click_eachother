@@ -1,1 +1,21 @@
-/* miniprogram/pages/step/step.wxss */
+.circle-box {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  padding: 64rpx 0;
+  background: #000;
+}
+.circle-title {
+  font-weight: 900;
+  font-size: 40rpx;
+  color: #fff;
+  padding: 32rpx 0rpx 0;
+  text-align: center;
+  background: #000;
+}
+
+.van-circle__text {
+  color: #fff!important;
+  font-weight: 900;
+  font-size: 48rpx;
+}

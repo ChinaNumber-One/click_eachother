@@ -4,19 +4,21 @@
     "pages/userCenter/userCenter",
     "pages/step/step",
     "pages/publish/publish",
-    "pages/task/task"
+    "pages/task/task",
+    "pages/sginIn/sginIn",
+    "pages/myWallet/myWallet"
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
+    "backgroundColor": "#F8F8F8",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarBackgroundColor": "#000",
     "navigationBarTitleText": "帮我点一下",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "color": "#8a8a8a",
-    "selectedColor": "#19A27C",
+    "selectedColor": "#333",
     "list": [
       {
         "text": "首页",

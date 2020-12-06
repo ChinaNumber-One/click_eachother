@@ -2,38 +2,7 @@
   "miniprogramRoot": "miniprogram/",
   "cloudfunctionRoot": "cloudfunctions/",
   "setting": {
-    "urlCheck": true,
-    "es6": true,
-    "enhance": true,
-    "postcss": true,
-    "preloadBackgroundData": false,
-    "minified": true,
-    "newFeature": true,
-    "coverView": true,
-    "nodeModules": true,
-    "autoAudits": false,
-    "showShadowRootInWxmlPanel": true,
-    "scopeDataCheck": false,
-    "uglifyFileName": false,
-    "checkInvalidKey": true,
-    "checkSiteMap": true,
-    "uploadWithSourceMap": true,
-    "compileHotReLoad": false,
-    "useMultiFrameRuntime": false,
-    "useApiHook": true,
-    "babelSetting": {
-      "ignore": [],
-      "disablePlugins": [],
-      "outputPath": ""
-    },
-    "bundle": false,
-    "useIsolateContext": true,
-    "useCompilerModule": true,
-    "userConfirmedUseCompilerModuleSwitch": false,
-    "userConfirmedBundleSwitch": false,
-    "packNpmManually": false,
-    "packNpmRelationList": [],
-    "minifyWXSS": true
+    "scopeDataCheck": false
   },
   "appid": "wx23252c1a09f1e665",
   "projectname": "click_eachother",
@@ -56,6 +25,23 @@
           "name": "个人中心",
           "pathName": "pages/userCenter/userCenter",
           "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/step/step",
+          "pathName": "pages/step/step",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "签到",
+          "pathName": "pages/sginIn/sginIn",
+          "scene": null,
+          "query": ""
+        },
+        {
+          "name": "pages/myWallet/myWallet",
+          "pathName": "pages/myWallet/myWallet",
           "scene": null
         }
       ]

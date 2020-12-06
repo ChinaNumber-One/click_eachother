@@ -1,31 +1,31 @@
 .head-box {
-  background-color: #19A27C;
-  width: 100%;
   box-sizing: border-box;
-  height: 264rpx;
-  padding-top: 48rpx;
+  color: #fff;
+  height: 320rpx;
+  width: 120vw;
+  margin-left: -10vw;
+  background: #000;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  margin-bottom: 50rpx;
+}
+.container {
+  width: 100vw;
+  overflow: hidden;
 }
 
 .user-info {
-  width: 86%;
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   box-sizing: border-box;
-  margin: 0 auto;
-  padding: 36rpx 64rpx;
-  background: #fff;
-  border-radius: 24rpx;
-  box-shadow: 2rpx 2rpx 8rpx 4rpx rgba(0, 0, 0, .1);
-  height: 300rpx;
+  padding: 36rpx 36rpx 0;
+  height: 266rpx;
 }
-
-.container {
-  background-color: #eee;
-}
-
 .user-img {
-  width: 160rpx;
-  height: 160rpx;
+  width: 140rpx;
+  height: 140rpx;
   border-radius: 80rpx;
   font-size: 96rpx;
   line-height: 160rpx;
@@ -36,32 +36,37 @@
 
 .user-nickname {
   font-size: 32rpx;
-  color: #333;
+  color: #fff;
   margin-top: 32rpx;
   margin-bottom: 12rpx;
 }
 
 .user-nickname .name {
   font-size: 36rpx;
+  display: flex;
+  align-items: center;
 }
-
-
+.gender-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 8rpx;
+}
 
 
 .get-info button {
   font-size: 32rpx;
-  color: #333;
+  color: #fff;
   line-height: 36rpx;
   border: none;
   height: 36rpx;
   padding: 0;
   margin: 0;
-  background:#fff;
+  background:#000;
 }
 
 .update-info button {
   font-size: 24rpx;
-  background: rgba(245, 51, 17, 0.4);
+  background: rgb(252, 102, 76);
   color: #fff;
   border-radius: 36rpx;
   line-height: 36rpx;
@@ -71,53 +76,54 @@
   margin: 0;
 }
 
-button {
-  padding: 0;
-  border: none;
-  background: none;
+.share-img {
+  width: 680rpx;
+  height: 160rpx;
+  display: block;
+  margin: 0 auto;
 }
 
-button::after {
-  display: none;
-}
 
-.my-num-box {
-  margin-top: 112rpx;
-  display: flex;
+.my-num {
+  width: 50vw;
   background: #fff;
-  padding: 32rpx;
+  height: 64rpx;
+  margin: 0 auto;
+  border-radius: 32rpx;
+  box-shadow: 0 4rpx 8rpx #999;
+  margin-top: 10rpx;
 }
 
-.my-num-item {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border-right: 1rpx solid #ddd;
-}
-
-.my-num-item:last-child {
-  border: none
-}
-
-.my-num-item .label {
-  font-size: 28rpx;
-  color: rgba(245, 51, 17, 1);
-  margin-bottom: 8rpx;
-}
-
-.my-num-item .value {
+.my-num .value {
   font-size: 32rpx;
   font-weight: 900;
-  color: #666;
+  color: #FFCA4C;
   display: flex;
+  height: 64rpx;
   align-items: center;
   justify-content: center;
 }
 
-.my-num-item .value .icon {
+.my-num .value .icon {
   width: 48rpx;
   height: 48rpx;
   margin-right: 8rpx;
+}
+
+.menu-icon {
+  width: 64rpx;
+  height: 64rpx;
+}
+.menu-title {
+  font-size: 28rpx;
+  margin-top: 12rpx;
+  color: #333;
+  line-height: 28rpx;
+}
+
+.van-grid-item__content {
+  padding: 0 0 32rpx!important;
+}
+.menu-box {
+  margin-top: 64rpx;
 }

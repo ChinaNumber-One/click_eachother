@@ -35,28 +35,6 @@ Page({
           showCancel: false
         })
       }
-      
-    }
-    if (res.data.otherDayFlag) {
-      const {code,msg} = await app.cloudFunction({
-        name: 'addGoldCoins',
-        data: {
-          openId: res.data.userInfo._openid,
-          ...getDataByType(1)
-        }
-      })
-      wx.hideLoading()
-      if(code === 0) {
-        this.setData({
-          showPresentModal: true,
-          ...getDataByType(1)
-        })
-      } else {
-        wx.showModal({
-          content: msg||'金币入账失败',
-          showCancel: false
-        })
-      }
     }
   },
   closePresentModal() {

@@ -2,6 +2,7 @@
 import {
   env
 } from './env'
+
 App({
   globalData: {
     openId:''

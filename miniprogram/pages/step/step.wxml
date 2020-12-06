@@ -1,3 +1,7 @@
+<view class='circle-title'>{{dateStr}}</view>
+<view class='circle-box'>
+  <van-circle speed='{{100}}' stroke-width="{{20}}" layer-color='rgba(255,255,255,0.3)' size='180' value="{{ value }}" color="{{ gradientColor }}" text="{{todayStep}}步" />
+</view>
 <button wx:if='{{showOpenSettingBtn}}' open-type="openSetting" bindopensetting="getOpenSettingData">打开设置页</button>
 
 <van-dialog

@@ -1,0 +1,11 @@
+<van-calendar color="#000" show-title="{{false}}" type="{{null}}" wx:if='{{showCalendar}}' poppable="{{ false }}" class="calendar"
+  min-date="{{ minDate }}" max-date="{{ maxDate }}" formatter="{{ formatter }}" show-confirm="{{false}}" />
+<view wx:if='{{showCalendar}}' style='padding: 88rpx 32rpx 0'>
+  <van-button color='#000' loading="{{btnLoading}}" bindtap="addGoldCoins" type='danger' round block disabled='{{!canSginIn}}'>{{canSginIn?"签到":"已签到"}}</van-button>
+  <view wx:if='{{showCalendar}}' class='tips'>
+    每次签到可获得100金币
+  </view>
+</view>
+
+<present-modal bind:close='closePresentModal' num='{{presentModalNum}}' desc='{{presentModalDesc}}'
+	show="{{showPresentModal}}"></present-modal>

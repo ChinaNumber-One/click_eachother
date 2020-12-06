@@ -27,7 +27,6 @@ exports.main = async (event, context) => {
         code: 0,
         data: {
           newUserFlag: true,
-          otherDayFlag: false,
           userInfo: data
         }
       }
@@ -49,7 +48,6 @@ exports.main = async (event, context) => {
         code: 0,
         data: {
           newUserFlag: false,
-          otherDayFlag: date.toDateString() !== new Date(data.lastLoginDate).toDateString(),
           userInfo: Object.assign(data, {
             lastLoginDate: date
           })

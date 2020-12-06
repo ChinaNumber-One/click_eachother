@@ -1,19 +1,79 @@
 const app = getApp()
-import {getDataByType} from '../../utils/addCoinType'
+import {
+  getDataByType
+} from '../../utils/addCoinType'
 Page({
   data: {
     info: {},
     showPresentModal: false,
     presentModalNum: 0,
     presentModalDesc: '',
-    authUserInfoNum: getDataByType(3).presentModalNum
+    authUserInfoNum: getDataByType(3).presentModalNum,
+    menuList: [{
+        title: '我的接单',
+        icon: 'menu-jd',
+        url: '',
+        type: 1,
+      },
+      {
+        title: '我的任务',
+        icon: 'menu-rw',
+        url: '',
+        type: 1,
+      },
+      {
+        title: '我的钱包',
+        icon: 'menu-qb',
+        url: '/pages/myWallet/myWallet',
+        type: 1,
+      },
+      {
+        title: '每日签到',
+        icon: 'menu-qd',
+        url: '/pages/sginIn/sginIn',
+        type: 1,
+      },
+      {
+        title: '幸运抽奖',
+        icon: 'menu-cj',
+        url: '',
+        type: 1,
+      },
+      {
+        title: '使用教程',
+        icon: 'menu-jc',
+        url: '',
+        type: 1,
+      },
+      {
+        title: '分享好友',
+        icon: 'menu-share',
+        url: '',
+        type: 3,
+      },
+      {
+        title: '联系客服',
+        icon: 'menu-kf',
+        type: 2,
+        openType: 'contact',
+      }
+    ],
+    options: [{
+        name: '微信',
+        icon: 'wechat',
+        openType: 'share'
+      },
+      {
+        name: '二维码',
+        icon: 'qrcode'
+      },
+    ],
+    showShare: false
   },
   async onShow() {
-    wx.showLoading({
-      title: '加载中'
-    })
+    wx.showNavigationBarLoading()
     await this.getData()
-    wx.hideLoading()
+    wx.hideNavigationBarLoading()
   },
   async getUserInfo(e) {
     if (e.detail.errMsg === "getUserInfo:ok") {
@@ -36,7 +96,7 @@ Page({
         if (!this.data.info.avatarUrl) {
           wx.showToast({
             title: '更新成功',
-            icon:'success'
+            icon: 'success'
           })
           this.setData({
             info: data
@@ -77,11 +137,9 @@ Page({
     }
   },
   async onPullDownRefresh() {
-    wx.showLoading({
-      title: '加载中'
-    })
+    wx.showNavigationBarLoading()
     await this.getData()
-    wx.hideLoading()
+    wx.hideNavigationBarLoading()
     wx.stopPullDownRefresh()
   },
   async getData() {
@@ -109,6 +167,55 @@ Page({
   closePresentModal() {
     this.setData({
       showPresentModal: false
+    })
+  },
+  goPage(e) {
+    const item = e.currentTarget.dataset.item
+    if (item.type === 1) {
+      if (!item.url) {
+        wx.showModal({
+          title: '',
+          content: '正在开发……',
+          showCancel: false
+        })
+      } else {
+        wx.navigateTo({
+          url: item.url,
+        })
+      }
+    } else if (item.type === 3) {
+      this.setData({
+        showShare: true
+      })
+    }
+  },
+  onCloseShare() {
+    this.setData({
+      showShare: false
+    })
+  },
+  async onSelectShare(e) {
+    if (e.detail.name === '二维码') {
+      const {
+        code,
+        data
+      } = await app.cloudFunction({
+        name: 'wxacode',
+        data: {
+          openId: app.globalData.openId
+        }
+      })
+      if (code === 0 && data) {
+        wx.previewImage({
+          current: data,
+          urls: [data],
+        })
+      }
+    }
+  },
+  openShare() {
+    this.setData({
+      showShare: true
     })
   }
 })

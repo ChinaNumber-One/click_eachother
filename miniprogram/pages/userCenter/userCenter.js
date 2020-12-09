@@ -18,7 +18,7 @@ Page({
       {
         title: '我的任务',
         icon: 'menu-rw',
-        url: '',
+        url: '/pages/myTaskPage/myTaskPage',
         type: 1,
       },
       {
@@ -42,7 +42,7 @@ Page({
       {
         title: '使用手册',
         icon: 'menu-jc',
-        url: '',
+        url: '/pages/readMe/readMe',
         type: 1,
       },
       {

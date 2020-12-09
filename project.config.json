@@ -48,6 +48,18 @@
         {
           "name": "pages/publish/publish",
           "pathName": "pages/publish/publish",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "myTaskPage",
+          "pathName": "pages/myTaskPage/myTaskPage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "/readMe",
+          "pathName": "pages/readMe/readMe",
           "scene": null
         }
       ]

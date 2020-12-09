@@ -7,7 +7,9 @@
     "pages/task/task",
     "pages/sginIn/sginIn",
     "pages/myWallet/myWallet",
-    "pages/publishSuccess/publishSuccess"
+    "pages/publishSuccess/publishSuccess",
+    "pages/myTaskPage/myTaskPage",
+    "pages/readMe/readMe"
   ],
   "window": {
     "backgroundColor": "#F8F8F8",

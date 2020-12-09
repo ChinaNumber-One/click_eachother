@@ -179,7 +179,6 @@ Page({
         showPresentModal: true,
         ...getDataByType(5,{steps: this.data.canExchangeStep})
       })
-      this.getWeRunData()
     }
   },
 })

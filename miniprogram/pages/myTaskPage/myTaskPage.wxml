@@ -1,0 +1,30 @@
+<van-tabs color='#000' active="{{ active }}" bind:change="onChange">
+  <van-tab title="全部"></van-tab>
+  <van-tab title="进行中"></van-tab>
+  <van-tab title="已过期"></van-tab>
+  <van-tab title="已完成"></van-tab>
+</van-tabs>
+
+<view class='list' wx:if='{{list.length && loaded}}'>
+    <view class='item' wx:for='{{list}}' wx:key='_id'>
+      <image wx:if='{{item.avatarUrl}}' src="{{item.avatarUrl}}" mode='aspectFit' class='head-img'></image>
+      <image wx:else src="../../images/default_headImg.png" mode='aspectFit' class='head-img'></image>
+      <view class='task-info'>
+        <view class='task-type'>{{item.taskType}}</view>
+       
+        <view class='task-num'>
+          <view style='margin-right:32rpx;color:red;'>{{item.taskPriceText}}</view>
+          <view>剩余数量：<text style='color:red;'>{{item.doneNum}}</text>/{{item.taskNum}}</view>
+        </view>
+        <view class='task-content'>{{item.taskTimeStr}}</view>
+      </view>
+      <view class='task-state' style='color:#ff9400;' wx:if='{{item.type===1}}'>进行中</view>
+      <view class='task-state' style='color:#ff4d4f;' wx:if='{{item.type===2}}'>已过期</view>
+      <view class='task-state' style='#52c41a;' wx:if='{{item.type===3}}'>已完成</view>
+    </view>
+  </view>
+  <view wx:if='{{loaded && !list.length}}'>
+    <van-empty description="暂无数据" />
+  </view>
+  <van-divider wx:if="{{noMore && list.length || list.length>0&&list.length<size}}"  customStyle="padding:0 32rpx;color: #999; border-color: #ddd;" contentPosition="center">没有更多了
+  </van-divider>

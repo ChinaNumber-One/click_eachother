@@ -1,21 +1,43 @@
 <view class='circle-title'>{{dateStr}}</view>
 <view class='circle-box'>
-  <van-circle speed='{{100}}' stroke-width="{{20}}" layer-color='rgba(255,255,255,0.3)' size='180' value="{{ value }}" color="{{ gradientColor }}" text="{{todayStep}}步" />
+  <van-circle speed='{{100}}' stroke-width="{{20}}" layer-color='rgba(255,255,255,0.3)' size='180' value="{{ value }}"
+    color="{{ gradientColor }}" text="{{todayStep}}步" />
 </view>
-<button wx:if='{{showOpenSettingBtn}}' open-type="openSetting" bindopensetting="getOpenSettingData">打开设置页</button>
+<view class='tips'>每2000步即可兑换100个金币，每日兑换金币上限为400个。</view>
+<view class='grid-box'>
+  <view class='grid-item'>
+    <view class='grid-title'>今日已使用步数</view>
+    <view class='grid-value'>{{hasExchangeStep}}步</view>
+  </view>
+  <view class='grid-item'>
+    <view class='grid-title'>今日已兑换金币</view>
+    <view class='grid-value'>{{hasExchangeStep/20}}个</view>
+  </view>
+</view>
+<view class='grid-box'>
+  <view class='grid-item'>
+    <view class='grid-title'>目前可使用步数</view>
+    <view class='grid-value'>{{canExchangeStep}}步</view>
+  </view>
+  <view class='grid-item'>
+    <view class='grid-title'>目前可兑换金币</view>
+    <view class='grid-value'>{{canExchangeStep/20}}个</view>
+  </view>
+</view>
 
-<van-dialog
-  title="提示"
-  show="{{ showDialog }}"
-  show-cancel-button
-  confirmButtonText='去开启'
-  confirm-button-open-type="openSetting"
-  bind:opensetting="getOpenSettingData"
-  message="您已拒绝授权获取微信运动数据！"
->
+<view class='btn-box'>
+  <van-button wx:if='{{showOpenSettingBtn}}' open-type="openSetting" bindopensetting="getOpenSettingData" color='#000'
+    loading="{{btnLoading}}" type='danger' round block>去开启微信运动步数</van-button>
+  <van-button wx:else color='#000' loading="{{btnLoading}}" type='danger' round block disabled='{{!canExchange}}' bindtap="addCoins">
+    {{canExchange?"兑换金币":hasExchangeStep>=8000?"已达上限":"暂无可用步数"}}</van-button>
+</view>
+
+
+<van-dialog title="提示" show="{{ showDialog }}" show-cancel-button confirmButtonText='去开启'
+  confirm-button-open-type="openSetting" bind:opensetting="getOpenSettingData" message="您已拒绝授权获取微信运动数据！">
 </van-dialog>
 
 
 
 <present-modal bind:close='closePresentModal' num='{{presentModalNum}}' desc='{{presentModalDesc}}'
-	show="{{showPresentModal}}"></present-modal>
+  show="{{showPresentModal}}"></present-modal>

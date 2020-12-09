@@ -5,16 +5,15 @@ Page({
   data: {
     showPresentModal: false,
     presentModalNum: 0,
-    presentModalDesc: 0
+    presentModalDesc: '',
+    current: 1,
+    size: 20,
+    list: [],
+    noMore: false,
+    loaded: false
   },
   async onLoad() {
-    wx.showLoading({
-      title: '加载中',
-    })
     const res = await app.login()
-    if(!res.data.newUserFlag && !res.data.otherDayFlag) {
-      wx.hideLoading()
-    }
     if (res.data.newUserFlag) {
       const {code,msg} = await app.cloudFunction({
         name: 'addGoldCoins',
@@ -23,7 +22,6 @@ Page({
           ...getDataByType(2)
         }
       })
-      wx.hideLoading()
       if(code === 0) {
         this.setData({
           showPresentModal: true,
@@ -36,10 +34,49 @@ Page({
         })
       }
     }
+    wx.showNavigationBarLoading()
+    await this.getTaskList()
+    wx.hideNavigationBarLoading()
   },
   closePresentModal() {
     this.setData({
       showPresentModal: false
     })
+  },
+  async getTaskList() {
+    const {code,data} = await app.cloudFunction({
+      name: 'getTaskPage',
+      data: {
+        openId: app.globalData.openId,
+        current: this.data.current,
+        size: this.data.size
+      }
+    })
+    this.setData({
+      loaded: true
+    })
+    if(code === 0) {
+      if(data.length) {
+        this.setData({
+          list: this.data.current?data:this.data.list.concat(data),
+          noMore: false
+        })
+      } else {
+        this.setData({
+          noMore: true
+        })
+      }
+    }
+  },
+  async onPullDownRefresh() {
+    this.data.current = 1
+    wx.showNavigationBarLoading()
+    await this.getTaskList()
+    wx.hideNavigationBarLoading()
+    wx.stopPullDownRefresh()
+  },
+  onReachBottom() {
+    this.data.current ++
+    this.getTaskList()
   }
 })

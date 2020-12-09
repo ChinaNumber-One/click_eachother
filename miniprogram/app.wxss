@@ -40,3 +40,9 @@ button {
 button::after {
   display: none;
 }
+.share-img {
+  width: 680rpx;
+  height: 160rpx;
+  display: block;
+  margin: 0 auto;
+}

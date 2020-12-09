@@ -1,6 +1,84 @@
-.share-img {
-  width: 680rpx;
-  height: 160rpx;
-  display: block;
-  margin: 0 auto;
+page {
+  background: #f8f8f8;
+}
+.swiper {
+  height: 364rpx;
+}
+.swiper-item {
+  padding:24rpx 32rpx;
+  width: 100vw;
+  height: 364rpx;
+  box-sizing: border-box;
+}
+.swiper-item-img {
+  height: 100%;
+  object-fit: cover;
+  background: #ddd;
+  text-align: center;
+  line-height: 300rpx;
+  font-size: 64rpx;
+  font-weight: 900;
+  width: 100%;
+  border-radius: 16rpx;
+}
+.list {
+  padding: 0 32rpx;
+  min-height:  calc( 100vh - 476rpx );
+}
+.item {
+  background: #fff;
+  margin-bottom: 16rpx;
+  border-radius: 12rpx;
+  box-shadow: 0 4rpx 8rpx #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24rpx;
+}
+.head-img {
+  height: 120rpx;
+  width: 120rpx;
+  margin-right: 32rpx;
+  flex-shrink: 0;
+  border-radius: 60rpx;
+}
+.task-price {
+  max-width: 180rpx;
+  flex-shrink: 0;
+  margin-left: 16rpx;
+  text-align: right;
+  color: red;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.task-info {
+  flex:1;
+  min-width: calc( 100vw - 476rpx );
+  flex-shrink: 0;
+}
+.task-type {
+  font-size: 28rpx;
+  font-weight: bolder;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #000;
+}
+.task-content {
+  font-size: 24rpx;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #666;
+  margin: 8rpx 0;
+}
+.task-num {
+  font-size: 24rpx;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #666;
 }

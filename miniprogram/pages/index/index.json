@@ -1,6 +1,10 @@
 {
   "usingComponents": {
-    "van-button": "@vant/weapp/button/index",
-    "present-modal": "../../components/presentModal/presentModal"
-  }
+    "present-modal": "../../components/presentModal/presentModal",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-empty": "@vant/weapp/empty/index"
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationBarTextStyle": "white"
 }

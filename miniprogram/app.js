@@ -54,6 +54,7 @@ App({
     if(code === 0) {
       this.globalData.openId = data.userInfo._openid
       this.globalData.userInfo = data.userInfo
+      console.log(this.globalData)
     } else {
       wx.hideLoading()
       wx.showModal({

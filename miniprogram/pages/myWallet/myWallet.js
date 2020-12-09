@@ -40,7 +40,6 @@ Page({
         const arr = data.map(item=>{
           return {
             ...item,
-            title: getDataByType(item.type).presentModalDesc ? getDataByType(item.type).presentModalDesc:'未知',
             date: getDateStr(new Date(item.createTime))
           }
         })

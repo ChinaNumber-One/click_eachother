@@ -21,8 +21,19 @@ const types = [
   }
 ]
 
-const getDataByType = (type) => {
-  return types.find(x=>x.type === type)
+const getDataByType = (type,obj) => {
+  if([1,2,3,4].indexOf(type) !== -1) {
+    return types.find(x=>x.type === type)
+  } else {
+    if(type === 5) {
+      return {
+        type: 5,
+        presentModalNum: obj.steps / 20,
+        presentModalDesc: `消耗${obj.steps}步数兑换金币`
+      }
+    }
+  }
+  
 }
 
 export {types, getDataByType}

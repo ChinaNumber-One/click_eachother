@@ -1,13 +1,13 @@
-<view class='mask' wx:if='{{show}}'>
-  <view class='modal-box'>
-    <image class='modal-bg' mode="aspectFit" src='../../images/present-gb.png'></image>
-    <view class='modal-text'>
-      <view class='modal-desc'>{{desc}}</view>
-      <view class='modal-num'>
-        <text>{{num}}</text>
-        <text style='font-size:36rpx;padding-left: 8rpx'>金币</text>
-      </view>
-    </view>
-    <image bindtap="closeModal" class='modal-close' src='../../images/close-icon-fff.png' mode="aspectFit"></image>
-  </view>
-</view>
+<cover-view class='mask' wx:if='{{show}}'>
+  <cover-view class='modal-box'>
+    <cover-image class='modal-bg' mode="aspectFit" src='../../images/present-gb.png'></cover-image>
+    <cover-view class='modal-text'>
+      <cover-view class='modal-desc'>{{desc}}</cover-view>
+      <cover-view class='modal-num'>
+        <cover-view style='overflow:auto;width:{{numLength * 40}}rpx'>{{num}}</cover-view>
+        <cover-view style='font-size:36rpx;'>金币</cover-view>
+      </cover-view>
+    </cover-view>
+    <cover-image bindtap="closeModal" class='modal-close' src='../../images/close-icon-fff.png' mode="aspectFit"></cover-image>
+  </cover-view>
+</cover-view>

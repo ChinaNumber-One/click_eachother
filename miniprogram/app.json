@@ -6,13 +6,14 @@
     "pages/publish/publish",
     "pages/task/task",
     "pages/sginIn/sginIn",
-    "pages/myWallet/myWallet"
+    "pages/myWallet/myWallet",
+    "pages/publishSuccess/publishSuccess"
   ],
   "window": {
     "backgroundColor": "#F8F8F8",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#000",
-    "navigationBarTitleText": "帮我点一下",
+    "navigationBarTitleText": "易互助",
     "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json",

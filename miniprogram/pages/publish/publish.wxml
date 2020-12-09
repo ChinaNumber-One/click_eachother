@@ -1,2 +1,60 @@
-<!--miniprogram/pages/publish/publish.wxml-->
-<text>miniprogram/pages/publish/publish.wxml</text>
+<van-notice-bar speed="{{35}}" color="#1989fa"
+  background="#ecf9ff" left-icon="volume-o" text="发布任务前，请确保您已阅读《使用手册》。若您未阅读，建议您先前往 个人中心-使用手册 去了解功能及相关规定。"/>
+<view class='page-box'>
+  <van-cell-group class='card'>
+    <van-field title-width='68px' placeholder-style='color:#999' label="任务类型" input-align='right' clearable
+      model:value="{{ taskType }}" border="{{false}}" placeholder="如：拼多多砍价" maxlength="{{32}}">
+      <image slot='left-icon' src='../../images/task-type.png' class='icon'></image>
+    </van-field>
+  </van-cell-group>
+  <van-cell-group>
+    <van-field title-width='68px' placeholder-style='color:#999' label="任务单数" input-align='right' clearable
+      model:value="{{ taskNum }}" type='number' border placeholder="需要多少人帮你完成" maxlength="{{5}}">
+      <image slot='left-icon' src='../../images/task-num.png' class='icon'></image>
+    </van-field>
+    <van-cell title-width='68px' is-link bindtap="openSelectPrice">
+      <image slot='icon' src='../../images/task-price.png' class='icon'></image>
+      <view slot="title">
+        <view class="van-cell-text" style='color:#646566'>任务单价</view>
+      </view>
+      <view style='color:{{taskPrice===null?"#999":"#323233"}}'>
+        {{taskPrice===null?'为每人支付多少金币':taskPriceText}}
+      </view>
+    </van-cell>
+  </van-cell-group>
+  <van-cell-group>
+    <van-field title-width='68px' placeholder-style='color:#999' label="任务描述" input-align='left' clearable
+      model:value="{{ taskContent }}" type='textarea' autosize="{{autoSize}}" border show-word-limit
+      placeholder="请概述任务需求，及需上传包含哪些关键信息的截图" maxlength="{{300}}">
+      <image slot='left-icon' src='../../images/task-content.png' class='icon'></image>
+    </van-field>
+    <van-field placeholder-style='color:#999' label="任务口令" input-align='right' type='textarea' autosize="{{autoSize}}"
+      title-width='68px' clearable model:value="{{ taskKey }}" border="{{false}}" placeholder="如有口令，请在此填写"
+      show-word-limit maxlength="{{300}}">
+      <image slot='left-icon' src='../../images/task-key.png' class='icon'></image>
+    </van-field>
+  </van-cell-group>
+  <van-cell-group>
+    <van-cell title-width='68px' is-link bindtap="openSelectTime">
+      <image slot='icon' src='../../images/task-time.png' class='icon'></image>
+      <view slot="title">
+        <view class="van-cell-text" style='color:#646566'>截止时间</view>
+      </view>
+      <view style='color:{{taskTime===null?"#999":"#323233"}}'>
+        {{taskTime===null?'选择任务截止时间':taskTimeStr}}
+      </view>
+    </van-cell>
+  </van-cell-group>
+  <view class='btn-box'>
+    <van-button type='danger' round block bindtap="publish" disabled='{{passRules}}'>发布</van-button>
+  </view>
+</view>
+
+<van-popup show="{{ selectPrice }}" round close-on-click-overlay="{{false}}" position="bottom">
+  <van-picker show-toolbar title="任务单价" columns="{{ columns }}" bind:cancel="onPriceCancel"
+    bind:confirm="onPriceConfirm" />
+</van-popup>
+<van-popup show="{{ selectTime }}" round close-on-click-overlay="{{false}}" position="bottom">
+  <van-datetime-picker title='任务截止时间' type="datetime" value="{{ taskTime }}" min-date="{{ minDate }}"
+    max-date="{{ maxDate }}" bind:cancel="onTimeCancel" bind:confirm="onTimeConfirm" />
+</van-popup>

@@ -40,7 +40,7 @@ Page({
         type: 1,
       },
       {
-        title: '使用教程',
+        title: '使用手册',
         icon: 'menu-jc',
         url: '',
         type: 1,

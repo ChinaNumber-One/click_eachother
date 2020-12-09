@@ -1,10 +1,34 @@
 <view>
   <view>
-		<button>
-			<image src='../../images/share-img.png' class='share-img'></image>
-		</button>
-	</view>
+    <swiper class='swiper' autoplay circular>
+      <swiper-item class='swiper-item'>
+        <image src='cloud://click-eachother-neh3s.636c-click-eachother-neh3s-1303076414/baseImg/WechatIMG284.png' class='swiper-item-img' mode="aspectFill"></image>
+      </swiper-item>
+      <swiper-item class='swiper-item'>
+        <image src='cloud://click-eachother-neh3s.636c-click-eachother-neh3s-1303076414/baseImg/WechatIMG285.png' class='swiper-item-img' mode="aspectFill"></image>
+      </swiper-item>
+      <swiper-item class='swiper-item'>
+        <image src='cloud://click-eachother-neh3s.636c-click-eachother-neh3s-1303076414/baseImg/WechatIMG286.png' class='swiper-item-img' mode="aspectFill"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class='list' wx:if='{{list.length && loaded}}'>
+    <view class='item' wx:for='{{list}}' wx:key='_id'>
+      <image wx:if='{{item.avatarUrl}}' src="{{item.avatarUrl}}" mode='aspectFit' class='head-img'></image>
+      <image wx:else src="../../images/default_headImg.png" mode='aspectFit' class='head-img'></image>
+      <view class='task-info'>
+        <view class='task-type'>{{item.taskType}}</view>
+        <view class='task-content'>{{item.taskContent}}</view>
+        <view class='task-num'>剩余数量：<text style='color:red;'>{{item.doneNum}}</text>/{{item.taskNum}}</view>
+      </view>
+      <view class='task-price'>+{{item.taskPrice}}</view>
+    </view>
+  </view>
+  <view wx:if='{{loaded && !list.length}}'>
+    <van-empty description="暂无任务" />
+  </view>
+  <van-divider wx:if="{{noMore && list.length || list.length>0&&list.length<size}}"  customStyle="padding:0 32rpx;color: #999; border-color: #ddd;" contentPosition="center">没有更多了
+  </van-divider>
+  <present-modal bind:close='closePresentModal' num='{{presentModalNum}}' desc='{{presentModalDesc}}'
+    show="{{showPresentModal}}"></present-modal>
 </view>
-<present-modal bind:close='closePresentModal' num='{{presentModalNum}}' desc='{{presentModalDesc}}' show="{{showPresentModal}}"></present-modal>
-
-<!-- 处理 云函数返回格式 规范成接口形式返回 -->

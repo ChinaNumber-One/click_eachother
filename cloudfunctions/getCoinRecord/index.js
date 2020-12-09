@@ -16,6 +16,7 @@ exports.main = async (event, context) => {
   const maxDate = new Date(curYear, curMonth, curDate.getDate())
   const minDate = new Date(curYear, curMonth, 1)
   let res = null
+  // 每日签到页面 使用，无需分页, 只拿当前月份之内的数据， maxDate 可以为今天 23:59:59 。 没必要改动
   if (event.type && event.type === 1) {
     res = await db.collection('goldCoinRecord').where({
       openId: event.openId,

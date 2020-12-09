@@ -39,11 +39,14 @@
   color: #FFCA4C;
   display: flex;
   align-items: center;
+}
+.coin-nums-row .nums view {
   background: #FFCA4C;
   background: linear-gradient(to bottom, #FFCA4C 0%, #FFCA4C 40%, #8c5c2e 55%, #FFCA4C 80%, #FFCA4C 91%);
   -webkit-background-clip: text;
   color: transparent;
 }
+
 
 .coin-nums-row .nums .icon {
   width: 64rpx;
@@ -56,7 +59,7 @@
   font-size: 24rpx;
   line-height: 44rpx;
   border-radius: 22rpx;
-  border: 1rpx solid #FFF;
+  border: 1px solid #FFF;
 }
 .item {
   border-bottom: 1rpx solid #eee;

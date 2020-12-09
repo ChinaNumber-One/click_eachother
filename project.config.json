@@ -6,7 +6,7 @@
   },
   "appid": "wx23252c1a09f1e665",
   "projectname": "click_eachother",
-  "libVersion": "2.8.1",
+  "libVersion": "2.12.2",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
@@ -36,12 +36,18 @@
         {
           "name": "签到",
           "pathName": "pages/sginIn/sginIn",
-          "scene": null,
-          "query": ""
+          "query": "",
+          "scene": null
         },
         {
           "name": "pages/myWallet/myWallet",
           "pathName": "pages/myWallet/myWallet",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/publish/publish",
+          "pathName": "pages/publish/publish",
           "scene": null
         }
       ]

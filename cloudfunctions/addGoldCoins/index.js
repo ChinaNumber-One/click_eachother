@@ -38,7 +38,7 @@ exports.main = async (event, context) => {
     let _id = data[0]._id
     let updateRes = await db.collection('user').doc(_id).update({
       data: {
-        goldCoin: data[0].goldCoin + presentModalNum
+        goldCoin: Math.round((data[0].goldCoin + presentModalNum)*100)/100
       }
     })
     if (updateRes.errMsg !== 'document.update:ok') {
@@ -50,7 +50,7 @@ exports.main = async (event, context) => {
     let addRes = await db.collection('goldCoinRecord').add({
       data: {
         openId,
-        createTime: new Date,
+        createTime: new Date(),
         changeNum: presentModalNum,
         desc: presentModalDesc,
         type

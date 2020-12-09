@@ -4,6 +4,8 @@
   justify-content: center;
   padding: 64rpx 0;
   background: #000;
+  position: relative;
+  margin-bottom: 32rpx;
 }
 .circle-title {
   font-weight: 900;
@@ -18,4 +20,50 @@
   color: #fff!important;
   font-weight: 900;
   font-size: 48rpx;
+}
+.setting-btn {
+  color: #000;
+  padding: 0 16rpx;
+  font-size: 24rpx;
+  line-height: 44rpx;
+}
+.btn-box {
+  padding:16rpx 64rpx 48rpx;
+  position: fixed;
+  background: #fff;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.grid-box {
+  display: flex;
+  padding: 0 32rpx;
+}
+.grid-item {
+  flex:1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 24rpx 0;
+}
+.grid-title {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 16rpx;
+}
+.grid-value {
+  font-size: 40rpx;
+  font-weight: 900;
+}
+.tips {
+  font-size: 24rpx;
+  color: red;
+  margin: 32rpx 0;
+  padding: 0 32rpx;
+}
+page {
+  min-height: 100vh;
+  padding-bottom: 184rpx;
+  box-sizing: border-box;
 }

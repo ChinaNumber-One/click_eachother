@@ -6,7 +6,7 @@
 </van-tabs>
 
 <view class='list' wx:if='{{list.length && loaded}}'>
-    <view class='item' wx:for='{{list}}' wx:key='_id'>
+    <view class='item' bindtap="goDetail" data-id="{{item._id}}" wx:for='{{list}}' wx:key='_id'>
       <image wx:if='{{item.avatarUrl}}' src="{{item.avatarUrl}}" mode='aspectFit' class='head-img'></image>
       <image wx:else src="../../images/default_headImg.png" mode='aspectFit' class='head-img'></image>
       <view class='task-info'>
@@ -14,9 +14,9 @@
        
         <view class='task-num'>
           <view style='margin-right:32rpx;color:red;'>{{item.taskPriceText}}</view>
-          <view>剩余数量：<text style='color:red;'>{{item.doneNum}}</text>/{{item.taskNum}}</view>
+          <view>剩余数量：<text style='color:red;'>{{item.taskNum-item.doneNum}}</text>/{{item.taskNum}}</view>
         </view>
-        <view class='task-content'>{{item.taskTimeStr}}</view>
+        <view class='task-content'>截止日期：{{item.taskTimeStr}}</view>
       </view>
       <view class='task-state' style='color:#ff9400;' wx:if='{{item.type===1}}'>进行中</view>
       <view class='task-state' style='color:#ff4d4f;' wx:if='{{item.type===2}}'>已过期</view>

@@ -1,1 +1,19 @@
-/* miniprogram/pages/publishSuccess/publishSuccess.wxss */
+.success-img {
+  margin: 128rpx auto 64rpx;
+  width: 290rpx;
+  height: 256rpx;
+  display: block;
+}
+.title {
+  font-weight: 900;
+  font-size: 40rpx;
+  text-align: center;
+}
+
+.btn-box {
+  padding: 0 64rpx;
+  margin-top: 88rpx;
+}
+button  {
+  font-size: 16px!important;
+}

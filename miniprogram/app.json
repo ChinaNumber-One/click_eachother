@@ -9,7 +9,8 @@
     "pages/myWallet/myWallet",
     "pages/publishSuccess/publishSuccess",
     "pages/myTaskPage/myTaskPage",
-    "pages/readMe/readMe"
+    "pages/readMe/readMe",
+    "pages/myTaskDetail/myTaskDetail"
   ],
   "window": {
     "backgroundColor": "#F8F8F8",

@@ -10,63 +10,63 @@ Page({
     presentModalDesc: '',
     authUserInfoNum: getDataByType(3).presentModalNum,
     menuList: [{
-        title: '我的接单',
-        icon: 'menu-jd',
-        url: '',
-        type: 1,
-      },
-      {
-        title: '我的任务',
-        icon: 'menu-rw',
-        url: '/pages/myTaskPage/myTaskPage',
-        type: 1,
-      },
-      {
-        title: '我的钱包',
-        icon: 'menu-qb',
-        url: '/pages/myWallet/myWallet',
-        type: 1,
-      },
-      {
-        title: '每日签到',
-        icon: 'menu-qd',
-        url: '/pages/sginIn/sginIn',
-        type: 1,
-      },
-      {
-        title: '幸运抽奖',
-        icon: 'menu-cj',
-        url: '',
-        type: 1,
-      },
-      {
-        title: '使用手册',
-        icon: 'menu-jc',
-        url: '/pages/readMe/readMe',
-        type: 1,
-      },
-      {
-        title: '分享好友',
-        icon: 'menu-share',
-        url: '',
-        type: 3,
-      },
-      {
-        title: '联系客服',
-        icon: 'menu-kf',
-        type: 2,
-        openType: 'contact',
-      }
+      title: '我的接单',
+      icon: 'menu-jd',
+      url: '',
+      type: 1,
+    },
+    {
+      title: '我的任务',
+      icon: 'menu-rw',
+      url: '/pages/myTaskPage/myTaskPage',
+      type: 1,
+    },
+    {
+      title: '我的钱包',
+      icon: 'menu-qb',
+      url: '/pages/myWallet/myWallet',
+      type: 1,
+    },
+    {
+      title: '每日签到',
+      icon: 'menu-qd',
+      url: '/pages/sginIn/sginIn',
+      type: 1,
+    },
+    {
+      title: '幸运抽奖',
+      icon: 'menu-cj',
+      url: '',
+      type: 1,
+    },
+    {
+      title: '使用手册',
+      icon: 'menu-jc',
+      url: '/pages/readMe/readMe',
+      type: 1,
+    },
+    {
+      title: '分享好友',
+      icon: 'menu-share',
+      url: '',
+      type: 3,
+    },
+    {
+      title: '联系客服',
+      icon: 'menu-kf',
+      type: 2,
+      openType: 'contact',
+    }
     ],
     options: [{
-        name: '微信',
-        icon: 'wechat',
-        openType: 'share'
-      },
-      {
-        name: '二维码',
-        icon: 'qrcode'
-      },
+      name: '微信',
+      icon: 'wechat',
+      openType: 'share'
+    },
+    {
+      name: '二维码',
+      icon: 'qrcode'
+    },
     ],
     showShare: false
   },
@@ -93,14 +93,15 @@ Page({
       })
       wx.hideLoading()
       if (code === 0) {
-        if (!this.data.info.avatarUrl) {
-          wx.showToast({
-            title: '更新成功',
-            icon: 'success'
-          })
-          this.setData({
-            info: data
-          })
+        this.setData({
+          info: data
+        })
+        wx.showToast({
+          title: '更新成功',
+          icon: 'success'
+        })
+        // 首次 加金币
+        if (e.target.dataset.type==='0') {
           const {
             code,
             msg
@@ -126,7 +127,7 @@ Page({
         }
       } else {
         wx.showModal({
-          content: msg || '获取数据失败'
+          content: msg || '更新失败'
         })
       }
     } else {

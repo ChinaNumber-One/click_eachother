@@ -1,5 +1,5 @@
 <van-notice-bar speed="{{35}}" color="#1989fa"
-  background="#ecf9ff" left-icon="volume-o" text="发布任务前，请确保您已阅读《使用手册》。若您未阅读，建议您先前往 个人中心-使用手册 去了解功能及相关规定。"/>
+  background="#ecf9ff" left-icon="volume-o" text="发布任务前，请确保您已阅读《使用手册》。若您未阅读，建议您先前往 个人中心-使用手册 去了解功能及相关规定。" mode='link' url='/pages/readMe/readMe'/>
 <view class='page-box'>
   <van-cell-group class='card'>
     <van-field title-width='68px' placeholder-style='color:#999' label="任务类型" input-align='right' clearable
@@ -46,7 +46,7 @@
     </van-cell>
   </van-cell-group>
   <view class='btn-box'>
-    <van-button type='danger' round block bindtap="publish" disabled='{{passRules}}'>发布</van-button>
+    <van-button type='danger' color="linear-gradient(to right, #ff6034, #ee0a24)" round block bindtap="publish" >发布</van-button>
   </view>
 </view>
 

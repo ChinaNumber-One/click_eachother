@@ -2,7 +2,8 @@
   "usingComponents": {
     "present-modal": "../../components/presentModal/presentModal",
     "van-divider": "@vant/weapp/divider/index",
-    "van-empty": "@vant/weapp/empty/index"
+    "van-empty": "@vant/weapp/empty/index",
+    "van-tag": "@vant/weapp/tag/index"
   },
   "enablePullDownRefresh": true,
   "backgroundTextStyle": "dark",

@@ -15,7 +15,6 @@ Page({
       maxHeight: 300,
       minHeight: 100
     },
-    passRules: false,
     taskKey: '',
     selectPrice: false,
     selectTime: false,
@@ -48,7 +47,7 @@ Page({
       text: '1000金币/单'
     }],
     minDate: new Date().getTime(),
-    maxDate: new Date().getTime() + 7 * 24 * 60 * 60 * 1000
+    maxDate: new Date().getTime() + 30 * 24 * 60 * 60 * 1000
   },
   onPriceCancel() {
     this.setData({

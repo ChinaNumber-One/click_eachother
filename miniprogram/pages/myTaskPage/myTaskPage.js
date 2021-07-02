@@ -63,5 +63,14 @@ Page({
   onReachBottom() {
     this.data.current ++
     this.getTaskList()
+  },
+  goDetail(e) {
+    if(!e.currentTarget.dataset.id) return wx.showModal({
+      content: '错误数据！',
+      showCancel: false
+    }) 
+    wx.navigateTo({
+      url: '/pages/myTaskDetail/myTaskDetail?id='+e.currentTarget.dataset.id,
+    })
   }
 })

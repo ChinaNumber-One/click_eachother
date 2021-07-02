@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index"
+  },
   "navigationBarTitleText": "任务发布成功"
 }

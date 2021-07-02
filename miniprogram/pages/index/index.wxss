@@ -34,6 +34,8 @@ page {
   align-items: center;
   justify-content: space-between;
   padding: 24rpx;
+  position: relative;
+  overflow: hidden;
 }
 .head-img {
   height: 120rpx;
@@ -81,4 +83,10 @@ page {
   text-overflow: ellipsis;
   white-space: nowrap;
   color: #666;
+}
+
+.item-tag {
+  position: absolute;
+  top: 0rpx;
+  right: 0rpx;
 }

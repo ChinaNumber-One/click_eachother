@@ -1,2 +1,13 @@
-<!--miniprogram/pages/publishSuccess/publishSuccess.wxml-->
-<text>miniprogram/pages/publishSuccess/publishSuccess.wxml</text>
+<view>
+  <image src='../../images/success.png' mode='objectFit' class='success-img'></image>
+  <view class='title'>发布成功</view>
+
+  <view class='btn-box'>
+    <view>
+      <van-button bindtap="goMyTask" color="linear-gradient(to right, #ff6034, #ee0a24)" round block>查看我的任务</van-button>
+    </view>
+    <view style='margin-top:16rpx;'>
+      <van-button bindtap="closeView" plain type='danger' color="#ee0a24" round block>关闭当前页面</van-button>
+    </view>
+  </view>
+</view>

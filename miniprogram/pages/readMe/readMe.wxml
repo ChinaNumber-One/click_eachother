@@ -1,0 +1,30 @@
+<view>
+  <view class='box'>
+    <view class='question'>可以发布什么任务？</view>
+    <view class='answer'>任何可以通过手机操作来完成的任务都可以；比如：拼多多砍价，淘宝双十一助力，下载App注册等</view>
+  </view>
+
+  <view class='box'>
+    <view class='question'>没有金币怎么办？</view>
+    <view class='answer'>
+      <view> 1、您可以在小程序底部菜单“赚金币”中完成相应任务来赚钱金币。</view>
+      <view>2、您可以在小程序底部菜单“运动步数”中授权微信运动，使用步数来兑换金币，上限400金币。</view>
+      <view>3、在个人中心分享小程序，别人通过您分享的链接进入小程序即可获得金币奖励（邀请到新用户奖励300金币，老用户奖励100金币，无上限）</view>
+    </view>
+  </view>
+
+  <view class='box'>
+    <view class='question'>如何做到公正审核？</view>
+    <view class='answer'>若觉得接单人没有完成您的任务，请上传相关有力证据的截图并赋予描述。恶意拒绝将扣除相应任务双倍的金币（不排除扣为负值）</view>
+  </view>
+
+  <view class='box'>
+    <view class='question'>对不通过的审核结果有不满该怎么做？</view>
+    <view class='answer'>您可以在我的接单里找到相应任务，进入详情页面，申请仲裁。等待客服查明。对于恶意接单不做任务就随便提交审核且被拒绝后申请仲裁者根据情况给予相应处罚</view>
+  </view>
+
+  <view class='box'>
+    <view class='question'>发布的任务剩余的金币如何返还？</view>
+    <view class='answer'>若您发布的任务未被全部完成，需等到任务过了有效期后，去我的任务中找到已过期的任务，进入详情点击退还金币即可收取。</view>
+  </view>
+</view>

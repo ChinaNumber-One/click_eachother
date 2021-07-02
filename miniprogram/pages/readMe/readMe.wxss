@@ -1,1 +1,16 @@
-/* miniprogram/pages/readMe/readMe.wxss */
+page {
+  padding: 64rpx 0;
+}
+.box {
+  padding: 0 32rpx;
+  margin-bottom: 48rpx;
+}
+.question {
+  font-size: 32rpx;
+  color: #000;
+  margin-bottom: 16rpx;
+}
+.answer {
+  font-size: 28rpx;
+  color: #666;
+}

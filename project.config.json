@@ -2,7 +2,40 @@
   "miniprogramRoot": "miniprogram/",
   "cloudfunctionRoot": "cloudfunctions/",
   "setting": {
-    "scopeDataCheck": false
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
   },
   "appid": "wx23252c1a09f1e665",
   "projectname": "click_eachother",
@@ -46,8 +79,8 @@
           "scene": null
         },
         {
-          "name": "pages/publish/publish",
-          "pathName": "pages/publish/publish",
+          "name": "pages/publishSuccess/publishSuccess",
+          "pathName": "pages/publishSuccess/publishSuccess",
           "query": "",
           "scene": null
         },
@@ -60,6 +93,13 @@
         {
           "name": "/readMe",
           "pathName": "pages/readMe/readMe",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/myTaskDetail/myTaskDetail",
+          "pathName": "pages/myTaskDetail/myTaskDetail",
+          "query": "id=28ee4e3e601b924a02d9a1c07b404612",
           "scene": null
         }
       ]

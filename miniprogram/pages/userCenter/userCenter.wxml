@@ -8,14 +8,14 @@
 					<image class='gender-icon' src='../../images/boy_icon.png' wx:if='{{info.gender === 1}}'></image>
 					<image class='gender-icon' src='../../images/girl_icon.png' wx:if='{{info.gender === 2}}'></image>
 				</view>
-				<van-button class='update-info' type="info" open-type="getUserInfo" bindgetuserinfo="getUserInfo">更新资料
+				<van-button class='update-info' data-type='1' type="info" open-type="getUserInfo" bindgetuserinfo="getUserInfo">更新资料
 				</van-button>
 			</view>
 		</view>
 		<view class='user-info' wx:else>
 			<image class='user-img' src="../../images/default_headImg.png"></image>
 			<view style='text-align:center;'>
-				<van-button class='get-info' type="info" open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权头像和昵称
+				<van-button class='get-info' type="info" data-type='0' open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权头像和昵称
 				</van-button>
 				<view style='font-size: 24rpx;color:red;margin-top:12rpx;'>（奖励 {{authUserInfoNum}}金币）</view>
 			</view>

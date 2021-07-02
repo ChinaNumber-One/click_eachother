@@ -19,9 +19,10 @@
       <view class='task-info'>
         <view class='task-type'>{{item.taskType}}</view>
         <view class='task-content'>{{item.taskContent}}</view>
-        <view class='task-num'>剩余数量：<text style='color:red;'>{{item.doneNum}}</text>/{{item.taskNum}}</view>
+        <view class='task-num'>剩余数量：<text style='color:red;'>{{item.taskNum - item.doneNum}}</text>/{{item.taskNum}}</view>
       </view>
       <view class='task-price'>+{{item.taskPrice}}</view>
+      <van-tag wx:if="{{item.taskPrice>=800}}" class='item-tag' color="#ff0000" text-color="#fff">优质任务</van-tag>
     </view>
   </view>
   <view wx:if='{{loaded && !list.length}}'>
